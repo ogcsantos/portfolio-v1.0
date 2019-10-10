@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <!-- ///////////////////////
+    ////// 
+    ////// CODE HTML - ( HEAD GERAL )
+    ////// 
+    //////////////////////// -->
+
+    <!-- # IMPORTS - ( META ) # -->
+    <base href="https://gmoehra.com/"/>
+    <link rel="canonical" href="https://gmoehra.com/"/>
+
+    <title> <?= $this->titulo; ?> </title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge"/>
+    <meta http-equiv="Content-Language" content="pt-br"/>
+    <meta http-equiv="Content-Type"     content="text/html; charset-utf-8"/>
+    <meta http-equiv="Content-Type"     content="text/html; charset=iso-8859-1"/>
+
+	<meta name="google"                 value="notranslate"/>
+	<meta name="viewport"               content="width=device-width, initial-scale=1.0"/>
+	<meta name="language"               content="PT-BR"/>
+	<meta name="author"                 content="G. Moehra | Discord: gmoehra#8251"/>
+	<meta name="robots"                 content="index,follow,noodp,noydir"/>
+	<meta name="revisit-after"          content="1 week"/>
+	<meta name="keywords"               content="<?= $this->chaves; ?>"/>
+	<meta name="theme-color"            content="<?= $this->cor_one; ?>"/>
+
+	<meta property="og:url"             content="https://gmoehra.com/"/>
+	<meta property="og:title"           content="<?= $this->titulo; ?>"/>
+	<meta property="og:type"            content="website"/>
+	<meta property="og:locale"          content="pt_BR"/>
+    <meta property="og:image"           content="https://gmoehra.com/arquivos/conteudo/publico/img/Favicon.png">
+    <meta property="og:site_name"       content="<?= SITE_NOME; ?>"/>
+    <meta property="og:description"     content="<?= $this->descricao; ?>"/>
+    <meta name="description"            content="<?= $this->descricao; ?>"/>
+
+    <meta name="twitter:card"           content="summary"/>
+    <meta name="twitter:site"           content="<?= $this->titulo; ?>"/>
+    <meta name="twitter:title"          content="<?= $this->titulo; ?>"/>
+    <meta name="twitter:description"    content="<?= $this->descricao; ?>"/>
+
+    <!-- # IMPORTS - ( FAVICON ) # -->
+  	<link rel="icon" type="img/png"     href="/arquivos/conteudo/publico/img/Favicon.png"/>
+
+
+
+    <!-- # IMPORTS - ( CSS ) # -->
+	<link rel="stylesheet" href="/arquivos/conteudo/publico/css/utils/normalizar.css">
+	<link rel="stylesheet" href="/arquivos/conteudo/publico/css/estilo.css">
+    <link rel="stylesheet" href="/arquivos/conteudo/publico/css/utils/animacoes.css">
+    <link rel="stylesheet" href="/arquivos/conteudo/publico/css/utils/et-icons/et-icons.css">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.3.92/css/materialdesignicons.min.css">
+
+
+
+    <!-- # IMPORTS - ( JS ) # -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    
+    <script src="/arquivos/conteudo/publico/js/jquery/jquery.min.js"></script>
+    <script src="/arquivos/conteudo/publico/js/jquery/jquery-ui.js"></script>
+
+    <!-- ---[UTILS]--- -->
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/29d2220d6a.js"></script>
+
+</head>
+<body>
+
+    <menu class="superior">
+        <div class="row">
+            <div class="col-md-4">
+                <li class="perfil">
+                    <div class="avatar">
+                        <img src="/arquivos/conteudo/publico/img/utils/Avatar 4.png" class="boxshadow">
+                    </div>
+
+                    <button type="button" onClick="goTo('/')">
+                        Geraldo Moehra
+                    </button>
+                </li>
+            </div>
+
+            <div class="col-md-8 pull-direito">
+                <li class="<?= $this->addAtivo('sites'); ?>">
+                    <button type="button" onClick="goTo('/sites')">
+                        <eticon class="icon-browser"></eticon> <em>Sites</em>
+                        <span><?= $this->a_central->cadastrados('sites'); ?></span>
+                    </button>
+                </li>
+                <li class="<?= $this->addAtivo('plugins'); ?>">
+                    <button type="button" onClick="goTo('/plugins')">
+                        <eticon class="icon-pricetags"></eticon> <em>Plugins</em>
+                        <span><?= $this->a_central->cadastrados('plugins'); ?></span>
+                    </button>
+                </li>
+                <li class="<?= $this->addAtivo('encomendar'); ?>">
+                    <button type="button" disabled onClick="goTo('/encomendar')">
+                        <eticon class="icon-basket"></eticon> <em>Encomendar</em>
+                    </button>
+                </li>
+            </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="2880" height="300" viewBox="0 0 2880 300">
+            <metadata>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                    <rdf:Description rdf:about=""/>
+                        </rdf:RDF>
+                </x:xmpmeta>
+            </metadata>
+            <path id="Forma_1" data-name="Forma 1" class="cls-1" d="M2880,136a3.466,3.466,0,0,1,0,5v66q-16.005,5-32,10c-27.4,6.866-54.29,13.1-82,19-52.46,11.179-106.84,20.743-164,29-44.12,6.374-95.15,12.177-145,17-53.22,5.149-105.34,9.079-159,12l-169,6c-36.8-.118-73.2-0.449-110-1-45.2-.677-89.81-1.669-135-3l-103-4c-88.44-4.836-176.76-10.156-266-16-22.33-1.463-78.61-5.323-118-8-133.27-9.058-275.52-18.208-397-25-35.4-1.979-71.815-3.767-105-5-85.363-3.171-168.1-4.171-252-3-55.488.774-132.019,3.383-200,7-55.568,2.956-112.8,7.144-159,13-25.064,3.177-49.834,6.843-74.513,11.033C191.63,269.064,167.478,273.769,146,278,99.346,287.191.312,299.984,0,298c-0.012-.078,0-0.634,0-1,0-.167,0-1,0-1V137a1.634,1.634,0,0,1,1-1,1.591,1.591,0,0,1,1,0H2876A3.372,3.372,0,0,1,2880,136Z"/>
+            <rect id="Retângulo_2" data-name="Retângulo 2" class="cls-2" width="2880" height="163"/>
+        </svg>
+
+    </menu>
+
+
+
+    <!-- |||||||||||||||||||||||||||||| -->
+    <!-- ||| [ CODIGO DO CONTEÚDO ] ||| -->
+    <!-- |||||||||||||||||||||||||||||| -->
+    <div class="ctn-global">
+        <div class="lgr-padrao">
+            <div class="row listagemBody">
+                <div class="col-md-3">
+                    <div class="card-geral normal boxshadow" tipo="plugin">
+                        <div class="topo">
+                            gMoehra Downloader
+                        </div>
+
+                        <div class="conteudo">
+                            <div class="imagem">
+                                <img src="/arquivos/conteudo/publico/img/utils/weapons/wps 1.png" styel="width: 100px; margin: 0 auto; display: block;">
+                            </div>
+                            
+                            <div class="botao_container">
+                                <button type="button" onClick="window.open('/plugins/info/')">
+                                    VER MAIS
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- |||||||||||||||||||||||||||||| -->
+    <!-- ||| [ CODIGO DO CONTEÚDO ] ||| -->
+    <!-- |||||||||||||||||||||||||||||| -->
+
+
+
+
+    <footer>
+        <div class="hunter boxshadow">
+            <div class="row">
+                <div class="col-md-9">
+                    <span class="one">
+                        Gostou do que viu?
+                    </span>
+                    <span class="two">
+                        Entre em contato.
+                    </span>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="sociais">
+                        <button type="button" onClick="window.open('https://twitter.com/gmoehra')">
+                            <mdi class="mdi mdi-twitter"></mdi> gmoehra
+                        </button>
+                        <button type="button" onClick="window.open('https://instagram.com/gmoehra')">
+                            <mdi class="mdi mdi-instagram"></mdi> gmoehra
+                        </button>
+                        <button type="button">
+                            <mdi class="mdi mdi-discord"></mdi> gmoehra#8251
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <svg class="padrao-2" viewBox="0 0 1440 24" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path class="svg-shape" d="M0 24H1440V0C722.5 52 0 0 0 0V24Z"></path>
+            </svg>
+            <div class="row">
+                <div class="col-md-10">
+                    <span class="direitos">
+                        Copyright © 2019. Todos direitos reservados.
+                    </span>
+                </div>
+
+                <div class="col-md-2 pull-direito">
+                    <button type="button" class="voltar_topo">
+                        <mdi class="mdi mdi-arrow-up-bold-hexagon-outline"></mdi>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- # IMPORTS - ( JS - UTILS ) # -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- # IMPORTS - ( JS - CONTROLADORES ) # -->
+    <script src="/arquivos/conteudo/publico/js/geral.js"></script>
+
+</body>
+</html>
